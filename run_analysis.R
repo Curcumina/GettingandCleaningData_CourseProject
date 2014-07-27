@@ -3,7 +3,7 @@ dirHAR = "./HAR"
 if(!file.exists(dirHAR)) {dir.create(dirHAR)}
 zipFileUrl = "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 destFile = paste(dirHAR, "data.zip", sep="/")
-download.file(zipFileUrl, destfile=destFile)
+download.file(zipFileUrl, destfile=destFile, method="curl")
 unzip(destFile, exdir=dirHAR)
 
 #setting the directories
@@ -45,7 +45,7 @@ all_average <- aggregate(all_data[,1:66], by=list(all_data$subject), FUN="mean")
 colnames(all_average)[1] = "subject"
 
 #Write to the disk as CSV files
-file = paste(dirData, "all_data.txt", sep="/")
+file =paste(dirData, "all_data.csv", sep="/")
 write.csv(all_data, file, row.names=FALSE)
-file = paste(dirData, "all_average.txt", sep="/")
+file = paste(dirData, "all_average.csv", sep="/")
 write.csv(all_average, file, row.names=FALSE)
