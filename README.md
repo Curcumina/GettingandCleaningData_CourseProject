@@ -1,11 +1,12 @@
 GettingandCleaningData_CourseProject
 ====================================
-## run_analysis
+## README.md
 Project - Getting and Cleaning Data Course
 The purpose of this project is to demonstrate the ability to collect, work with, and clean a data set to make it tidy. The tidy data set will then be used for exploratory and advanced analytics. Data for this project is collected from the accelerometers from the Samsung Galaxy S smartphone.
 There are following files in this repo:
 1.    run_analysis.R
 2.    CodeBook.md
+3.    all_average.csv (Since the tidy data set was not not uploaded satisfactorily, I have included this file as tidy data set)
 
 ========================================================
 
